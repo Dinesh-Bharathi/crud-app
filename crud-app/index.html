@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <script src="https://kit.fontawesome.com/f8bc26dc4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="moreinfo" id="moreInfo">
+        <i class="fa-regular fa-rectangle-xmark" onclick="closeInfo()"></i>
+        <table>
+            <tr>
+                <thead> 
+                    <th>name</th>
+                    <th>name</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <td id="infoName"></td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td id="infoPhone"></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td id="infoEmail"></td>
+                    </tr>
+                    <tr>
+                        <th>Course</th>
+                        <td id="infoCourse"></td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td id="infoPrice"></td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td id="infoDate"></td>
+                    </tr>
+                    <tr>
+                        <th>Linkedin</th>
+                        <td id="infoLinkedin"></td>
+                    </tr>
+                    <tr>
+                        <th>Github</th>
+                        <td id="infoGithub"></td>
+                    </tr>
+                    <tr>
+                        <th>Behance</th>
+                        <td id="infoBehance"></td>
+                    </tr>
+                </tbody>
+            </tr>
+        </table>
+    </div>
+
+    
+    
+    <div class="navbar">
+        <a href="#" class="title">CRUD System</a>
+        <!-- <nav>
+            <a href="index.html" class="nav-link" target="_blank">Home</a>
+            <a href="addnew.html" class="nav-link">Add New</a>
+        </nav> -->
+    </div>
+    
+    
+    <header>
+        
+        
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div class="error-container " id="error"></div>
+      
+            <div class="form-container">
+                <input class="hide" type="text" id="formId">
+                <input type="text" placeholder="Name*" id="name">
+                <label class="picture" for="picture">Upload image</label>
+                <input type="file" accept="image/jpeg, image/png, image/jpg" name="picture" id="picture">
+                <div id="img-con"></div>
+            </div>
+            <div class="form-container">
+                <input type="tel" name="phone" id="phone" placeholder="phone">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="text" name="course" id="course" placeholder="Course">
+                <input type="text" name="price" id="price" placeholder="Price $">
+                <input type="date" id="date" name="myDate" value="2023-03-03">
+            </div>
+            <div class="form-container">
+                <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin Account">
+                <input type="text" name="github" id="github" placeholder="Github Account">
+                <input type="text" name="behance" id="behance" placeholder="Behance Account">
+            </div>
+            <input type="submit" value="Create" id="submitBtn">
+        </form>
+   </header>
+
+   <table class="list" id="employeeList">
+    <thead>
+        <tr>
+            <th class="block-600">ID</th>
+            <th class="block-600">PHOTO</th>
+            <th>NAME</th>
+            <th class="block-600">PHONE</th>
+            <th class="block-600">EMAIL</th>
+            <th class="block-600">COURSE</th>
+            <th class="block-600">PRICE</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+            <th>MORE INFO.</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+</table>
+
+   <script src="index.js"></script>
+</body>
+</html>

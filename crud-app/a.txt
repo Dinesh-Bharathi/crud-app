@@ -1,0 +1,20 @@
+ <div class="header">
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+           <div class="form-container">
+            <input type="text" placeholder="Name">
+            <input type="file" name="dp" id="pd">
+           </div>
+           <div class="form-container">
+            <input type="number" name="phone" id="phone" placeholder="phone">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="text" name="course" id="course" placeholder="Course">
+            <input type="date" name="date" id="date" placeholder="Date">
+           </div>
+           <div class="form-container">
+            <input type="text" name="linkedin" id="linkedin" placeholder="Linkedin Account">
+            <input type="text" name="github" id="github" placeholder="Github Account">
+            <input type="text" name="behance" id="behance" placeholder="Behance Account">
+           </div>
+           <input type="submit" value="Create">
+        </form>
+    </div>
